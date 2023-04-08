@@ -8,19 +8,21 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    private var imageView: NekoView!
+    private var currentState: NekoState?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.frame = NSRect(x: 0, y: 0, width: 32, height: 32)
+        imageView = NekoView(frame: self.view.frame)
+        self.view.addSubview(imageView)
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    
+    func update(image: NSImage) {
+        imageView.update(image: image)
+        imageView.image = image
     }
-
-
+    
 }
 
