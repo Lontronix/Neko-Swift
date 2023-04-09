@@ -34,6 +34,37 @@ class NekoViewModel {
     }
 }
 
+class NekoPanelViewController: NSWindowController {
+    
+    @IBOutlet weak var nekoPanel: NekoPanel!
+    
+    override func windowDidLoad() {
+        super.windowDidLoad()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.handleWindowStateChangeNotification(_:)),
+            name: NekoNotifications.windowStateDidChangeNotification,
+            object: nil
+        )
+        
+        nekoPanel.close()
+    }
+    
+    @objc private func handleWindowStateChangeNotification(_ notification: NSNotification) {
+        guard let state = notification.userInfo?["state"] as? NekoWindowState else { return }
+        switch state {
+        case .visible:
+            nekoPanel.resumeNeko()
+            showWindow(nekoPanel)
+        case .hidden:
+            nekoPanel.pauseNeko()
+            nekoPanel.close()
+        }
+    }
+    
+}
+
 class NekoPanel: NSPanel {
     
     var updateTimer: Timer!
@@ -59,6 +90,14 @@ class NekoPanel: NSPanel {
         self.setFrame(NSRect(x: 0, y: 0, width: 32, height: 32), display: false)
         self.center()
         
+        self.resumeNeko()
+    }
+    
+    func pauseNeko() {
+        updateTimer.invalidate()
+    }
+    
+    func resumeNeko() {
         self.updateTimer = Timer.scheduledTimer(withTimeInterval: 0.125, repeats: true) { timer in
             self.updateNekoLocation()
         }
@@ -113,11 +152,10 @@ class NekoPanel: NSPanel {
         var xPos = Float(self.frame.origin.x)
         var yPos = Float(self.frame.origin.y)
         
-        guard let vc = self.contentViewController as? ViewController else {
+        guard let vc = self.contentViewController as? NekoViewController else {
             fatalError("ContentViewController is not an instance of ViewController")
         }
         
-        print(viewModel.tickCount)
         if viewModel.currentState != .sleep {
             vc.update(image: viewModel.currentState.imageFor(tickCount: viewModel.tickCount))
         } else {
@@ -238,12 +276,9 @@ class NekoPanel: NSPanel {
         
         // TODO: Figure out what this magic number does...
         let deltaX = floor(mouseXPos - x - 16.0)
-//        print(deltaX)
         let deltaY = floor(mouseYPos - y)
         
         let length = hypot(deltaX, deltaY)
-        
-//        print("length: \(length)")
         
         guard length != 0 else {
             nekoMoveDx = 0

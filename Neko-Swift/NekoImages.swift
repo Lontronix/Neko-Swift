@@ -10,20 +10,17 @@ import AppKit
 struct NekoImages {
     
     // MARK: Stop
-    
     static let stopImages = [
         NSImage(contentsOfFile: Bundle.main.path(forResource: "mati2", ofType: "gif")!)!
     ]
     
     // MARK: Up
-    
     static let moveUpImages = [
         NSImage(contentsOfFile: Bundle.main.path(forResource: "up1", ofType: "gif")!)!,
         NSImage(contentsOfFile: Bundle.main.path(forResource: "up2", ofType: "gif")!)!
     ]
     
     // MARK: Up Left
-    
     static let moveUpLeftImages = [
         NSImage(contentsOfFile: Bundle.main.path(forResource: "upleft1", ofType: "gif")!)!,
         NSImage(contentsOfFile: Bundle.main.path(forResource: "upleft2", ofType: "gif")!)!
@@ -116,6 +113,4 @@ struct NekoImages {
         NSImage(contentsOfFile: Bundle.main.path(forResource: "rtogi1", ofType: "gif")!)!,
         NSImage(contentsOfFile: Bundle.main.path(forResource: "rtogi2", ofType: "gif")!)!
     ]
-    
-    
 }

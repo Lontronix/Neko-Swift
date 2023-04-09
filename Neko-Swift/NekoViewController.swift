@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class NekoViewController: NSViewController {
     
     private var imageView: NekoView!
     private var currentState: NekoState?

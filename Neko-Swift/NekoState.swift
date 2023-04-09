@@ -86,7 +86,6 @@ enum NekoState {
     
     func imageFor(tickCount: Int) -> NSImage {
         let images = self.images
-        print(tickCount % images.count)
         return images[tickCount % images.count]
     }
 }
