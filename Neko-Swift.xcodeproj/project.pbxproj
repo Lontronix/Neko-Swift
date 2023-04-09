@@ -92,6 +92,7 @@
 		6EC1EE7529E093C3000DA70F /* NekoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoView.swift; sourceTree = "<group>"; };
 		6EF1115829E124BC006A7F18 /* NekoImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoImages.swift; sourceTree = "<group>"; };
 		6EF1115A29E12707006A7F18 /* NekoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoState.swift; sourceTree = "<group>"; };
+		6EF1116029E1FD10006A7F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 				6EC1EE2729E07688000DA70F /* Assets.xcassets */,
 				6EC1EE2929E07688000DA70F /* Main.storyboard */,
 				6EC1EE2C29E07688000DA70F /* Neko_Swift.entitlements */,
+				6EF1116029E1FD10006A7F18 /* Info.plist */,
 			);
 			path = "Neko-Swift";
 			sourceTree = "<group>";
@@ -254,6 +256,7 @@
 				6EC1EE5929E07D29000DA70F /* upleft2.gif in Resources */,
 				6EC1EE6529E07D29000DA70F /* kaki2.gif in Resources */,
 				6EC1EE6729E07D29000DA70F /* jare2.gif in Resources */,
+				6EF1116129E1FD10006A7F18 /* Info.plist in Resources */,
 				6EC1EE5B29E07D29000DA70F /* kaki1.gif in Resources */,
 				6EC1EE5629E07D29000DA70F /* dwleft1.gif in Resources */,
 				6EC1EE6E29E07D29000DA70F /* sleep2.gif in Resources */,
@@ -352,6 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Neko-Swft/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -406,6 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Neko-Swft/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -427,6 +432,7 @@
 				DEVELOPMENT_TEAM = K36HYHZA7X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Neko-Swift/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -455,6 +461,7 @@
 				DEVELOPMENT_TEAM = K36HYHZA7X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Neko-Swift/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
