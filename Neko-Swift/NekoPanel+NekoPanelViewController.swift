@@ -70,7 +70,9 @@ class NekoPanel: NSPanel {
         self.isMovableByWindowBackground = false
         self.ignoresMouseEvents = true
         self.setFrame(NSRect(x: 0, y: 0, width: 32, height: 32), display: false)
+        
+        // allows Neko to appear in all Spaces and in mission control
+        self.collectionBehavior = [.canJoinAllSpaces, .stationary]
         self.center()
     }
-    
 }
