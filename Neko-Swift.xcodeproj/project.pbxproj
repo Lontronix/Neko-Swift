@@ -45,6 +45,8 @@
 		6EC1EE7329E07D29000DA70F /* upleft1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1EE5329E07D29000DA70F /* upleft1.gif */; };
 		6EC1EE7429E07D29000DA70F /* dwright1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1EE5429E07D29000DA70F /* dwright1.gif */; };
 		6EDBBDA029E2575A00FCEB80 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBBD9F29E2575A00FCEB80 /* StateMachine.swift */; };
+		6EDBBDA329E3B1B400FCEB80 /* create-icons.sh in Resources */ = {isa = PBXBuildFile; fileRef = 6EDBBDA229E3B1B400FCEB80 /* create-icons.sh */; };
+		6EDBBDA529E3B1BE00FCEB80 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6EDBBDA429E3B1BE00FCEB80 /* README.md */; };
 		6EF1115929E124BC006A7F18 /* NekoImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1115829E124BC006A7F18 /* NekoImages.swift */; };
 		6EF1115B29E12707006A7F18 /* NekoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1115A29E12707006A7F18 /* NekoState.swift */; };
 		6EF1115D29E1F972006A7F18 /* Neko.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6EF1115C29E1F972006A7F18 /* Neko.icns */; };
@@ -93,6 +95,8 @@
 		6EC1EE5329E07D29000DA70F /* upleft1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = upleft1.gif; sourceTree = "<group>"; };
 		6EC1EE5429E07D29000DA70F /* dwright1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dwright1.gif; sourceTree = "<group>"; };
 		6EDBBD9F29E2575A00FCEB80 /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		6EDBBDA229E3B1B400FCEB80 /* create-icons.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "create-icons.sh"; sourceTree = "<group>"; };
+		6EDBBDA429E3B1BE00FCEB80 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6EF1115829E124BC006A7F18 /* NekoImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoImages.swift; sourceTree = "<group>"; };
 		6EF1115A29E12707006A7F18 /* NekoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoState.swift; sourceTree = "<group>"; };
 		6EF1115C29E1F972006A7F18 /* Neko.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Neko.icns; path = "Neko-Swift/Resources/Neko.icns"; sourceTree = SOURCE_ROOT; };
@@ -114,6 +118,8 @@
 		6EC1EE1729E07686000DA70F = {
 			isa = PBXGroup;
 			children = (
+				6EDBBDA229E3B1B400FCEB80 /* create-icons.sh */,
+				6EDBBDA429E3B1BE00FCEB80 /* README.md */,
 				6EC1EE2229E07687000DA70F /* Neko-Swift */,
 				6EC1EE2129E07687000DA70F /* Products */,
 			);
@@ -279,10 +285,12 @@
 				6EC1EE2B29E07688000DA70F /* Main.storyboard in Resources */,
 				6EC1EE5D29E07D29000DA70F /* ltogi2.gif in Resources */,
 				6EC1EE6329E07D29000DA70F /* ltogi1.gif in Resources */,
+				6EDBBDA329E3B1B400FCEB80 /* create-icons.sh in Resources */,
 				6EC1EE6429E07D29000DA70F /* up2.gif in Resources */,
 				6EC1EE5829E07D29000DA70F /* upright2.gif in Resources */,
 				6EC1EE5C29E07D29000DA70F /* mati2.gif in Resources */,
 				6EC1EE6129E07D29000DA70F /* awake.gif in Resources */,
+				6EDBBDA529E3B1BE00FCEB80 /* README.md in Resources */,
 				6EC1EE7129E07D29000DA70F /* rtogi1.gif in Resources */,
 				6EC1EE6229E07D29000DA70F /* right2.gif in Resources */,
 				6EC1EE6A29E07D29000DA70F /* down1.gif in Resources */,
