@@ -14,7 +14,7 @@ class NekoViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.frame = NSRect(x: 0, y: 0, width: 32, height: 32)
+        self.view.frame = NSRect(x: 0, y: 0, width: 36, height: 36)
         imageView = NekoView(frame: self.view.frame)
         self.view.addSubview(imageView)
     }

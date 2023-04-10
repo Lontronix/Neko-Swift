@@ -11,7 +11,7 @@ class NekoPanelController: NSWindowController {
     
     @IBOutlet weak var nekoPanel: NekoPanel!
     
-    private var stateMachine = NekoStateMachine()
+    private var stateMachine: NekoStateMachine = NekoFullScreenStateMachine()
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -50,14 +50,12 @@ extension NekoPanelController: NekoStateMachineDelegate {
     
     func getCursorNekoLocation() -> (NSPoint, NSPoint) {
         let mousePoint = NSEvent.mouseLocation
-        return (mousePoint, nekoPanel.frame.origin)
+        return (CGPoint(x: mousePoint.x, y: mousePoint.y), CGPoint(x: nekoPanel.frame.origin.x, y: nekoPanel.frame.origin.y))
     }
     
     func newNeko(pos: CGPoint) {
-        nekoPanel.setFrameOrigin(pos)
+        nekoPanel.setFrameOrigin(CGPoint(x: pos.x, y: pos.y))
     }
-    
-    
 }
 
 class NekoPanel: NSPanel {
@@ -72,7 +70,9 @@ class NekoPanel: NSPanel {
         self.isMovableByWindowBackground = false
         self.ignoresMouseEvents = true
         self.setFrame(NSRect(x: 0, y: 0, width: 32, height: 32), display: false)
+        
+        // allows Neko to appear in all Spaces and in mission control
+        self.collectionBehavior = [.canJoinAllSpaces, .stationary]
         self.center()
     }
-    
 }
