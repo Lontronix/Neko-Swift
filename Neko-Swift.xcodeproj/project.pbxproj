@@ -44,9 +44,11 @@
 		6EC1EE7229E07D29000DA70F /* rtogi2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1EE5229E07D29000DA70F /* rtogi2.gif */; };
 		6EC1EE7329E07D29000DA70F /* upleft1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1EE5329E07D29000DA70F /* upleft1.gif */; };
 		6EC1EE7429E07D29000DA70F /* dwright1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1EE5429E07D29000DA70F /* dwright1.gif */; };
-		6EDBBDA029E2575A00FCEB80 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBBD9F29E2575A00FCEB80 /* StateMachine.swift */; };
+		6EDBBDA029E2575A00FCEB80 /* NekoStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBBD9F29E2575A00FCEB80 /* NekoStateMachine.swift */; };
 		6EDBBDA329E3B1B400FCEB80 /* create-icons.sh in Resources */ = {isa = PBXBuildFile; fileRef = 6EDBBDA229E3B1B400FCEB80 /* create-icons.sh */; };
 		6EDBBDA529E3B1BE00FCEB80 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6EDBBDA429E3B1BE00FCEB80 /* README.md */; };
+		6EDBBDA729E3BA4500FCEB80 /* NekoFullScreenStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBBDA629E3BA4500FCEB80 /* NekoFullScreenStateMachine.swift */; };
+		6EDBBDA929E3BA8F00FCEB80 /* NekoMenuBarStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBBDA829E3BA8F00FCEB80 /* NekoMenuBarStateMachine.swift */; };
 		6EF1115929E124BC006A7F18 /* NekoImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1115829E124BC006A7F18 /* NekoImages.swift */; };
 		6EF1115B29E12707006A7F18 /* NekoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1115A29E12707006A7F18 /* NekoState.swift */; };
 		6EF1115D29E1F972006A7F18 /* Neko.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6EF1115C29E1F972006A7F18 /* Neko.icns */; };
@@ -94,9 +96,11 @@
 		6EC1EE5229E07D29000DA70F /* rtogi2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rtogi2.gif; sourceTree = "<group>"; };
 		6EC1EE5329E07D29000DA70F /* upleft1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = upleft1.gif; sourceTree = "<group>"; };
 		6EC1EE5429E07D29000DA70F /* dwright1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dwright1.gif; sourceTree = "<group>"; };
-		6EDBBD9F29E2575A00FCEB80 /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		6EDBBD9F29E2575A00FCEB80 /* NekoStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoStateMachine.swift; sourceTree = "<group>"; };
 		6EDBBDA229E3B1B400FCEB80 /* create-icons.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "create-icons.sh"; sourceTree = "<group>"; };
 		6EDBBDA429E3B1BE00FCEB80 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6EDBBDA629E3BA4500FCEB80 /* NekoFullScreenStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoFullScreenStateMachine.swift; sourceTree = "<group>"; };
+		6EDBBDA829E3BA8F00FCEB80 /* NekoMenuBarStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoMenuBarStateMachine.swift; sourceTree = "<group>"; };
 		6EF1115829E124BC006A7F18 /* NekoImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoImages.swift; sourceTree = "<group>"; };
 		6EF1115A29E12707006A7F18 /* NekoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekoState.swift; sourceTree = "<group>"; };
 		6EF1115C29E1F972006A7F18 /* Neko.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Neko.icns; path = "Neko-Swift/Resources/Neko.icns"; sourceTree = SOURCE_ROOT; };
@@ -195,7 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				6EF1115A29E12707006A7F18 /* NekoState.swift */,
-				6EDBBD9F29E2575A00FCEB80 /* StateMachine.swift */,
+				6EDBBD9F29E2575A00FCEB80 /* NekoStateMachine.swift */,
+				6EDBBDA629E3BA4500FCEB80 /* NekoFullScreenStateMachine.swift */,
+				6EDBBDA829E3BA8F00FCEB80 /* NekoMenuBarStateMachine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,10 +314,12 @@
 			files = (
 				6EF1115B29E12707006A7F18 /* NekoState.swift in Sources */,
 				6EF1116429E2129C006A7F18 /* NekoNotifications.swift in Sources */,
+				6EDBBDA729E3BA4500FCEB80 /* NekoFullScreenStateMachine.swift in Sources */,
 				6EC1EE2629E07687000DA70F /* NekoViewController+NekoView.swift in Sources */,
-				6EDBBDA029E2575A00FCEB80 /* StateMachine.swift in Sources */,
+				6EDBBDA029E2575A00FCEB80 /* NekoStateMachine.swift in Sources */,
 				6EF1115929E124BC006A7F18 /* NekoImages.swift in Sources */,
 				6EC1EE2429E07687000DA70F /* AppDelegate.swift in Sources */,
+				6EDBBDA929E3BA8F00FCEB80 /* NekoMenuBarStateMachine.swift in Sources */,
 				6EC1EE3329E0777E000DA70F /* NekoPanel+NekoPanelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

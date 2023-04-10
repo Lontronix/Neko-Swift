@@ -1,19 +1,13 @@
 //
-//  StateMachine.swift
+//  NekoFullScreenStateMachine.swift
 //  Neko-Swift
 //
-//  Created by Lonnie Gerol on 4/8/23.
+//  Created by Lonnie Gerol on 4/9/23.
 //
 
-import AppKit
+import Foundation
 
-protocol NekoStateMachineDelegate {
-    func update(sprite: NSImage)
-    func getCursorNekoLocation() -> (NSPoint, NSPoint)
-    func newNeko(pos: CGPoint)
-}
-
-class NekoStateMachine {
+class NekoFullScreenStateMachine: NekoStateMachine {
     
     var delegate: NekoStateMachineDelegate?
     
