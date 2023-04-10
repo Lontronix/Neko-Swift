@@ -50,11 +50,12 @@ extension NekoPanelController: NekoStateMachineDelegate {
     
     func getCursorNekoLocation() -> (NSPoint, NSPoint) {
         let mousePoint = NSEvent.mouseLocation
-        return (CGPoint(x: mousePoint.x, y: mousePoint.y), CGPoint(x: nekoPanel.frame.origin.x, y: nekoPanel.frame.origin.y))
+        return (CGPoint(x: mousePoint.x, y: 0), CGPoint(x: nekoPanel.frame.origin.x, y: 10))
     }
     
     func newNeko(pos: CGPoint) {
-        nekoPanel.setFrameOrigin(CGPoint(x: pos.x, y: pos.y))
+        guard let screenFrame = NSScreen.main?.frame else { return }
+        nekoPanel.setFrameOrigin(CGPoint(x: pos.x, y: screenFrame.maxY - 36))
     }
 }
 
